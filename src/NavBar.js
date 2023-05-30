@@ -25,7 +25,7 @@ const NavBar = () => {
           <a href="#Blog">Blog</a>
         </li>
       </ul>
-      <div className="pr-60 py-2">
+      <div className="pr-60 pl-5 py-2">
         <h1 style={{ fontFamily: "'Courgette', cursive", fontSize: "30px" }}>
           Minymals
         </h1>
@@ -40,22 +40,26 @@ const NavBar = () => {
       </div>
       <div
         onClick={handleNav}
-        className="{nav ? 'overflow-y-hidden md:hidden ease-in duration-300 absolute text-gray-300 left-0 top-0 w-full h-screen bg-black/90 px-4 py-7 flex flex-col' : 'selection:absolute top-0 h-screen left-[-100%] ease-in duration-500'}"
+        className={
+          nav
+            ? "overflow-y-hidden md:hidden ease-in duration-300 absolute text-gray-300 left-0 top-0 w-full h-screen bg-black/90 px-4 py-7 flex flex-col"
+            : "absolute top-0 h-screen left-[-100%] ease-in duration-500"
+        }
       >
         <ul className="h-full w-full text-center pt-12">
-          <li className="text-2xl ">
+          <li className="text-xl my-3 ">
             <a href="/">Home</a>
           </li>
-          <li className="text-2xl">
+          <li className="text-xl my-3">
             <a href="#Shop">Shop</a>
           </li>
-          <li className="text-2xl">
+          <li className="text-xl my-3">
             <a href="#Collections">Collections</a>
           </li>
-          <li className="text-2xl">
+          <li className="text-xl my-3">
             <a href="#Pages">Pages</a>
           </li>
-          <li className="text-2xl">
+          <li className="text-xl my-3">
             <a href="#Blog">Blog</a>
           </li>
         </ul>
