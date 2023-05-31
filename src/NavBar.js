@@ -26,7 +26,7 @@ const NavBar = () => {
         </li>
       </ul>
       <div className="pr-60 pl-5 py-2">
-        <h1 style={{ fontFamily: "'Courgette', cursive", fontSize: "30px" }}>
+        <h1 style={{ fontFamily: "'Courgette', cursive", fontSize: "35px" }}>
           Minymals
         </h1>
       </div>
