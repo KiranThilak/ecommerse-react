@@ -47,19 +47,34 @@ const NavBar = () => {
         }
       >
         <ul className="h-full w-full text-center pt-12">
-          <li className="text-xl my-3 ">
+          <li
+            className="text-xl my-3 "
+            style={{ fontFamily: "'Oswald', sans-serif" }}
+          >
             <a href="/">Home</a>
           </li>
-          <li className="text-xl my-3">
+          <li
+            className="text-xl my-3"
+            style={{ fontFamily: "'Oswald', sans-serif" }}
+          >
             <a href="#Shop">Shop</a>
           </li>
-          <li className="text-xl my-3">
+          <li
+            className="text-xl my-3"
+            style={{ fontFamily: "'Oswald', sans-serif" }}
+          >
             <a href="#Collections">Collections</a>
           </li>
-          <li className="text-xl my-3">
+          <li
+            className="text-xl my-3"
+            style={{ fontFamily: "'Oswald', sans-serif" }}
+          >
             <a href="#Pages">Pages</a>
           </li>
-          <li className="text-xl my-3">
+          <li
+            className="text-xl my-3"
+            style={{ fontFamily: "'Oswald', sans-serif" }}
+          >
             <a href="#Blog">Blog</a>
           </li>
         </ul>
