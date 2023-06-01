@@ -38,38 +38,63 @@ const HeroSection = () => {
     const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
+
   const nextSlide = () => {
     const isLastSlide = currentIndex === slides.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
+
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
   };
 
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
+
   return (
     <div className="max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group">
+      {/* Slide content */}
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
       ></div>
 
-      {/* left arrow */}
+      {/* Left arrow */}
       <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
         <BsChevronCompactLeft size={30} onClick={prevSlide} />
       </div>
-      {/* right arrow */}
+
+      {/* Right arrow */}
       <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
         <BsChevronCompactRight onClick={nextSlide} size={30} />
       </div>
-      <div className="flex top-4  justify-center py-2">
+
+      {/* Icon list */}
+      <div className="flex top-4 justify-center py-1">
         {slides.map((slide, slideIndex) => (
           <div
             key={slideIndex}
             onClick={() => goToSlide(slideIndex)}
-            className="text-2xl cursor-pointer"
+            className={`icon-class ${
+              hoveredIndex === slideIndex ? "hover:icon-hovered" : ""
+            }`}
+            onMouseEnter={() => handleMouseEnter(slideIndex)}
+            onMouseLeave={handleMouseLeave}
+            style={{ fontSize: "2rem", cursor: "pointer" }}
           >
-            <RxDot size={25} className="text-black-600" />
+            {hoveredIndex === slideIndex ? (
+              <RxDotFilled size={25} className="text-neutral-800" />
+            ) : (
+              <RxDot size={25} className="text-neutral-800" />
+            )}
           </div>
         ))}
       </div>

@@ -9,23 +9,23 @@ const NavBar = () => {
   return (
     <div className="w-full min-h[50px] flex justify-between items-center absolute z-10">
       <ul className="hidden sm:flex px-4">
-        <li className="p-3 font-medium">
+        <li className="py-2 px-5 bg-white rounded-lg hover:bg-black hover:text-white">
           <a href="/">Home</a>
         </li>
-        <li className="p-3 font-medium">
+        <li className="py-2 px-5 bg-white rounded-lg hover:bg-black hover:text-white">
           <a href="#Shop">Shop</a>
         </li>
-        <li className="p-3 font-medium">
+        <li className="py-2 px-5 bg-white rounded-lg hover:bg-black hover:text-white">
           <a href="#Collections">Collections</a>
         </li>
-        <li className="p-3 font-medium">
+        <li className="py-2 px-5 bg-white rounded-lg hover:bg-black hover:text-white">
           <a href="#Pages">Pages</a>
         </li>
-        <li className="p-3 font-medium">
+        <li className="py-2 px-5 bg-white rounded-lg hover:bg-black hover:text-white">
           <a href="#Blog">Blog</a>
         </li>
       </ul>
-      <div className="pr-60 pl-5 py-2">
+      <div /*  className="pr-60 pl-5 py-2" */>
         <h1 style={{ fontFamily: "'Courgette', cursive", fontSize: "35px" }}>
           Minymals
         </h1>
