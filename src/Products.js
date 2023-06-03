@@ -177,8 +177,10 @@ export default function Example() {
         <ul className="flex cursor-pointer py-3 px-6">
           {ProductsNavData.map((item, index) => (
             <li
-              className={`py-2 px-6 bg-white rounded-lg ${
-                activeCategory === item.name ? "bg-black text-white" : ""
+              className={`py-2 px-6 bg-white rounded-lg text-black ${
+                activeCategory === item.name
+                  ? "bg-black text-white hover:bg-black hover:text-white"
+                  : "hover:bg-black hover:text-white"
               }`}
               key={index}
               onClick={() => handleClick(item.name)}
@@ -193,8 +195,8 @@ export default function Example() {
 
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
           {filteredProducts.map((product) => (
-            <a key={product.id} href={product.href} className="group">
-              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+            <a key={product.id} href={product.href} className="group ">
+              <div className=" aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
                 <img
                   src={product.imageSrc}
                   alt={product.imageAlt}
