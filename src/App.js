@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import HeroSection from "./HeroSection";
 import NavBar from "./NavBar";
 import Products from "./Products";
@@ -9,6 +10,7 @@ function App() {
       <HeroSection />
 
       <Products />
+      <Footer />
     </div>
   );
 }
