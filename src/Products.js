@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 /* import { ProductsNavData, products } from "./ProductsData"; */
+import Searchbar from "./Searchbar";
 const ProductsNavData = [
   {
     name: "All",
@@ -174,21 +175,26 @@ export default function Example() {
   return (
     <div className="bg-white">
       <div style={{ borderBottom: "2px solid #eaeaea" }}>
-        <ul className="flex cursor-pointer py-3 px-6">
-          {ProductsNavData.map((item, index) => (
-            <li
-              className={`py-2 px-6 bg-white rounded-lg text-black ${
-                activeCategory === item.name
-                  ? "bg-black text-white hover:bg-black hover:text-white"
-                  : "hover:bg-black hover:text-white"
-              }`}
-              key={index}
-              onClick={() => handleClick(item.name)}
-            >
-              {item.name}
-            </li>
-          ))}
-        </ul>
+        <div className="flex justify-between">
+          <ul className="flex cursor-pointer py-3 px-6">
+            {ProductsNavData.map((item, index) => (
+              <li
+                className={`py-2 px-6 bg-white rounded-lg text-black ${
+                  activeCategory === item.name
+                    ? "bg-black text-white hover:bg-black hover:text-white"
+                    : "hover:bg-black hover:text-white"
+                }`}
+                key={index}
+                onClick={() => handleClick(item.name)}
+              >
+                {item.name}
+              </li>
+            ))}
+          </ul>
+          <div className="flex justify-start px-8">
+            <Searchbar />
+          </div>
+        </div>
       </div>
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <h2 className="sr-only">Products</h2>
