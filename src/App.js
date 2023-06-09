@@ -5,7 +5,7 @@ import NavBar from "./NavBar";
 import Products from "./Products";
 
 function App() {
-  const products = useState([
+  const [products] = useState([
     {
       id: 1,
       name: "T Shirt White",
